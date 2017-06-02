@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.catlitterbox05.CalendarActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/app_calendar_topbar"
+        android:id="@+id/imageView3" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/linearLayout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="50dp">
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text=""
+        android:textSize="20sp"
+        android:background="@color/colorWhite"
+        android:id="@+id/gv_calendar_activity_b_last" />
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_weight="2">
+
+    <TextView
+        android:id="@+id/gv_calendar_activity_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorWhite"
+        android:gravity="center_horizontal"
+        android:paddingLeft="10dp"
+        android:textColor="@color/colorDark"
+        android:textSize="20sp"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_weight="0">
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text=">"
+            android:textSize="20sp"
+            android:background="@color/colorWhite"
+            android:id="@+id/gv_calendar_activity_b_next" />
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorWhite"
+        android:layout_below="@+id/linearLayout"
+        android:layout_above="@+id/relativeLayout2">
+
+        <GridView
+            android:id="@+id/gv_calendar_activity_gv_calendar"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:numColumns="7"
+            android:listSelector="@color/colorGreen">
+        </GridView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout2">
+
+        <Button
+            android:id="@+id/calendarBtn"
+            android:layout_width="48dp"
+            android:layout_height="36dp"
+            android:background="@drawable/app_main_icon_calendar_selected"
+            android:layout_marginLeft="36dp"
+            android:layout_marginStart="36dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/mainBtn"
+            android:layout_width="48dp"
+            android:layout_height="36dp"
+            android:background="@drawable/app_main_icon_home"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/settingsBtn"
+            android:layout_width="48dp"
+            android:layout_height="36dp"
+            android:layout_alignBottom="@+id/mainBtn"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/app_main_icon_settings"
+            android:layout_alignTop="@+id/mainBtn" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
